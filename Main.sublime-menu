@@ -1,0 +1,11 @@
+[
+	{
+		"Caption": "Tools",
+		"mnemonic": "T",
+		"id": "tools",
+		"children":
+		[
+			{"command": "unpickle", "caption": "Unpickle", "mnemonic": "U"},
+		]
+	}
+]
