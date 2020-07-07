@@ -14,7 +14,6 @@ class UnpickleCommand(sublime_plugin.TextCommand):
             unpickled = '<br>Error: Not a pickle file!'
 
         self.view.erase_phantoms('unpickle')
-        # 10**10 is just a hack to get to the bottom. What's the proper way to do this?
-        self.view.add_phantom('unpickle', sublime.Region(10**10, 10**10+1),
+        self.view.add_phantom('unpickle', sublime.Region(self.view.size(), self.view.size()),
                               unpickled, sublime.LAYOUT_BLOCK)
-        self.view.show(10**10)
+        self.view.show(self.view.size())
